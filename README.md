@@ -175,11 +175,13 @@ endmodule
 ### i) SR FLIPFLOP:
 ![](  ./sr.png)
 ### ii) D FLIPFLOP:
-![](./d.png.png)
+
+![](./d.png)
+
 ### iii) JK FLIPFLOP:
-![](./jk.png.png)
+![](./jk.png)
 ### iv) T FLIPFLOP:
-![](./t.png.png)
+![](./t.png)
 
 
 
@@ -191,11 +193,11 @@ endmodule
 ### i) SR FLIPFLOP:
 ![](./sr_td.png)
 ### ii) D FLIPFLOP:
-![](./d_td.png.png)
+![](./d_td.png)
 ### iii) JK FLIPFLOP:
-![](./jk_td.png.png)
+![](./jk_td.png)
 ### iv) T FLIPFLOP:
-![](./t_td.png.png)
+![](./t_td.png)
 
 
 
