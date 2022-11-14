@@ -102,16 +102,69 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
-
+1. Open Quartus II and select new project and choose the file location.
+2. Module Declaration. Module should have the file name.
+3. Declare Inputs and outputs.
+4. Use assign declaration and wire to define the functionality of logic circuits.
+5. End the program with endmodule.
+6. Run the program and choose RTL viewer to get RTL realization.
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: Kirupanandhan.T
+RegisterNumber: 212221230051
+
+i) SR FLIP FLOP:
+
+module SR(S,R,Clock,Q,Qbar);
+input S,R,Clock;
+output Q,Qbar;
+wire X,Y;
+nand (X,S,Clock);
+nand (Y,R,Clock);
+nand (Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+
+ii) D FLIP FLOP:
+
+module DF (D,Clock,Q,Qbar);
+input D,Clock;
+output Q,Qbar;
+assign Dbar = ~D;
+wire X,Y;
+nand (X,D,Clock);
+nand (Y,Dbar,Clock);
+nand (Q,X,Qbar);
+nand (Qbar,Y,Q);
+endmodule
+
+iii) JK FLIP FLOP:
+
+module JK(J,K,Clock,Q,Qbar);
+input J,K,Clock;
+output Q,Qbar;
+wire P,S;
+nand (P,J,Clock,Qbar);
+nand (S,K,Clock,Q);
+nand (Q,P,Qbar);
+nand (Qbar,S,Q);
+endmodule
+
+iv) T FLIP FLOP:
+
+module TF (T,Clock,Q,Qbar);
+input T,Clock;
+output Q,Qbar;
+wire A,B;
+nand (A,T,Clock,Qbar);
+nand (B,T,Clock,Q);
+nand (Q,A,Qbar);
+nand (Qbar,B,Q);
+endmodule
+```
 
 
 
@@ -119,8 +172,14 @@ RegisterNumber:
 
 
 ### RTL LOGIC FOR FLIPFLOPS 
-
-
+### i) SR FLIPFLOP:
+![](  ./sr.png)
+### ii) D FLIPFLOP:
+![](./d.png.png)
+### iii) JK FLIPFLOP:
+![](./jk.png.png)
+### iv) T FLIPFLOP:
+![](./t.png.png)
 
 
 
@@ -129,12 +188,17 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
+### i) SR FLIPFLOP:
+![](./sr_td.png)
+### ii) D FLIPFLOP:
+![](./d_td.png.png)
+### iii) JK FLIPFLOP:
+![](./jk_td.png.png)
+### iv) T FLIPFLOP:
+![](./t_td.png.png)
 
 
 
 
 ### RESULTS 
+All the flipflops are implemented using verilog and their functionality has been validated using their functional tables.
